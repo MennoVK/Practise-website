@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <link id="favicon" rel="icon" type="image/x-icon" href="assets/favicon/image%20(0).png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="javascript/script.js"></script>
+    <title>Stranger things</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="logo"><h1>STRANGER THINGS</h1></li>
+            <li><a href="index.html">Karakters</a></li>
+            <li><a href="verhaal.html">Verhaal</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="bronnen.html">Bronnen</a></li>
+        </ul>
+    </nav>
+
+    <a onclick="shopping_cart_Function()">
+        <section id="shopping_cart" class="shopping_cart">
+            <img src="assets/icons/shopping_cart.png" alt="shopping cart">
+        </section>
+    </a>
+
+    <section class="shopping_cart_inhoud" id="shopping_cart_inhoud">
+
+        <h1 id="empty">Het winkelwagentje is leeg</h1>
+       
+        <section class="shopping_cart_identifier">
+            <h2 class="small">Item</h2>
+            <h2>Naam</h2>
+            <h2 class="small">Aantal</h2>
+            <h2 class="small">Prijs</h2>
+            <h2>Verwijder</h2>
+        </section>
+
+        <section class="shopping_cart_item" id="1">
+            <section class="shopping_cart_text">
+                <p class="small">Funko Pop</p>
+                <p>"Demogorgon" Funko Pop</p>
+                <p class="small" id="aantal_1"></p>
+                <p class="small">€15,-</p>
+                <a class="remove" onclick="removeFunction(1, 15)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="2">
+            <section class="shopping_cart_text">
+                <p class="small">Funko Pop</p>
+                <p>"Dustin" Funko Pop</p>
+                <p class="small" id="aantal_2"></p>
+                <p class="small">€15,-</p>
+                <a class="remove" onclick="removeFunction(2, 15)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="3">
+            <section class="shopping_cart_text">
+                <p class="small">Funko Pop</p>
+                <p>"Eleven" Funko Pop</p>
+                <p class="small" id="aantal_3"></p>
+                <p class="small">€15,-</p>
+                <a class="remove" onclick="removeFunction(3, 15)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="4">
+                <section class="shopping_cart_text">
+                <p class="small">Funko Pop</p>
+                <p>"Lucas" Funko Pop</p>
+                <p class="small" id="aantal_4"></p>
+                <p class="small">€15,-</p>
+                <a class="remove" onclick="removeFunction(4 ,15)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="5">
+            <section class="shopping_cart_text">
+                <p class="small">Funko Pop</p>
+                <p>"Max" Funko Pop</p>
+                <p class="small" id="aantal_5"></p>
+                <p class="small">€15,-</p>
+                <a class="remove" onclick="removeFunction(5, 15)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="6">
+            <section class="shopping_cart_text">
+                <p class="small">Funko Pop</p>
+                <p>"Mike" Funko Pop</p>
+                <p class="small" id="aantal_6"></p>
+                <p class="small">€15,-</p>
+                <a class="remove" onclick="removeFunction(6, 15)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="7">
+            <section class="shopping_cart_text">
+                <p class="small">Funko Pop</p>
+                <p>"will" Funko Pop</p>
+                <p class="small" id="aantal_7"></p>
+                <p class="small">€15,-</p>
+                <a class="remove" onclick="removeFunction(7, 15)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="8">
+            <section class="shopping_cart_text">
+                <p class="small">Klok</p>
+                <p>"Stranger Things" klok</p>
+                <p class="small" id="aantal_8"></p>
+                <p class="small">€10,-</p>
+                <a class="remove" onclick="removeFunction(8, 10)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="9">
+            <section class="shopping_cart_text">
+                <p class="small">Deurmat</p>
+                <p>"Enter the upside down" deurmat</p>
+                <p class="small" id="aantal_9"></p>
+                <p class="small">€25,-</p>
+                <a class="remove" onclick="removeFunction(9, 25)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="10">
+            <section class="shopping_cart_text">
+                <p class="small">T-Shirt</p>
+                <p>"Stranger Things" T-shirt wit</p>
+                <p class="small" id="aantal_10"></p>
+                <p class="small">€20,-</p>
+                <a class="remove" onclick="removeFunction(10, 20)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="11">
+            <section class="shopping_cart_text">
+                <p class="small">T-Shirt</p>
+                <p>"Stranger Things" T-shirt zwart</p>
+                <p class="small" id="aantal_11"></p>
+                <p class="small">€20,-</p>
+                <a class="remove" onclick="removeFunction(11, 20)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        
+        <section class="shopping_cart_item" id="12">
+            <section class="shopping_cart_text">
+                <p class="small">Hoodie</p>
+                <p>"Stranger Things" Hoodie</p>
+                <p class="small" id="aantal_12"></p>
+                <p class="small">€40,-</p>
+                <a class="remove" onclick="removeFunction(12, 40)">
+                    <p>X</p>
+                </a>
+            </section>
+        </section>
+        <section class="totaalprijs_text">
+            <section class="totaalprijs">
+                <h1>Totaal:</h1>
+                <h1 id="totaalprijs"></h1>
+            </section>
+        </section>
+        <section class="afreken_text">
+            <section id="afreken_button">
+                <button onclick="alert('bestelling geplaatst')">Afrekenen</button>
+            </section>
+        </section>
+    </section>
+
+    <section class="flexbox">
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/funko_demogorgon.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Funko Pop</h1>
+                <p>"Demogorgon" Funko Pop</p>
+                <p><b>€15,-</b></p>
+                <button class="cart_button" onclick="cartFunction(1, 15)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/funko_dustin.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Funko Pop</h1>
+                <p>"Dustin" Funko Pop</p>
+                <p><b>€15,-</b></p>
+                <button class="cart_button" onclick="cartFunction(2, 15)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/funko_eleven.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Funko Pop</h1>
+                <p>"Eleven" Funko Pop</p>
+                <p><b>€15,-</b></p>
+                <button class="cart_button" onclick="cartFunction(3, 15)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/funko_lucas.png" alt="Avatar">
+            </section>
+                <section class="card_text">
+                <h1>Funko Pop</h1>
+                <p>"Lucas" Funko Pop</p>
+                <p><b>€15,-</b></p>
+                <button class="cart_button" onclick="cartFunction(4, 15)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+        
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/funko_max.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Funko Pop</h1>
+                <p>"Max" Funko Pop</p>
+                <p><b>€15,-</b></p>
+                <button class="cart_button" onclick="cartFunction(5, 15)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/funko_mike.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Funko Pop</h1>
+                <p>"Mike" Funko Pop</p>
+                <p><b>€15,-</b></p>
+                <button class="cart_button" onclick="cartFunction(6, 15)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/funko_will.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Funko Pop</h1>
+                <p>"will" Funko Pop</p>
+                <p><b>€15,-</b></p>
+                <button class="cart_button" onclick="cartFunction(7, 15)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/klok.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Klok</h1>
+                <p>"Stranger Things" klok</p>
+                <p><b>€10,-</b></p>
+                <button class="cart_button" onclick="cartFunction(8, 10)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/deurmat.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Deurmat</h1>
+                <p>"Enter the upside down" deurmat</p>
+                <p><b>€25,-</b></p>
+                <button class="cart_button" onclick="cartFunction(9, 25)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/tshirt_wit.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>T-Shirt</h1>
+                <p>"Stranger Things" T-shirt wit</p>
+                <p><b>€20,-</b></p>
+                <button class="cart_button" onclick="cartFunction(10, 20)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/tshirt_zwart.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>T-Shirt</h1>
+                <p>"Stranger Things" T-shirt zwart</p>
+                <p><b>€20,-</b></p>
+                <button class="cart_button" onclick="cartFunction(11, 20)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+        
+        <section class="card">
+            <section class="card_image">
+                <img src="assets/shop_items/hoodie.png" alt="Avatar">
+            </section>
+            <section class="card_text">
+                <h1>Hoodie</h1>
+                <p>"Stranger Things" Hoodie</p>
+                <p><b>€40,-</b></p>
+                <button class="cart_button" onclick="cartFunction(12, 40)">Voeg toe aan winkelwagen.</button>
+            </section>
+        </section>
+    </section>
+</body>
+</html>

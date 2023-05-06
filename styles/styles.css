@@ -1,0 +1,598 @@
+/*
+Hallo docent. Vergeet niet om over de plaatjes de karakters pagina heen te hoveren.
+*/
+
+
+/* 
+algemene css 
+*/
+
+@font-face {
+  font-family: BenguiatStd-Book; src: url('BenguiatStd-Book.otf'); 
+}
+
+:root{
+  --color_nav: rgba(0, 0, 0, 0.4);
+  --color_accent: rgba(255, 0, 0, 1);
+  --color_white: rgba(255,255,255,1);
+  --color_hover: rgba(0, 0, 0, 0.5);
+  --color_blue: rgba(2, 1, 88, 1);
+}
+
+html{
+  scroll-behavior: smooth;
+  font-family: BenguiatStd-Book;
+}
+
+body{
+  margin: 0;
+  background-image: linear-gradient(132deg, rgba(55, 55, 55,0.05) 20%, rgba(55, 55, 55,0.05) 54%,rgba(209, 209, 209,0.05) 2%, rgba(209, 209, 209,0.05) 60%,rgba(245, 245, 245,0.05) 60%, rgba(245, 245, 245,0.05) 69%,rgba(164, 164, 164,0.05) 69%, rgba(164, 164, 164,0.05) 100%), 
+                    linear-gradient(232deg, rgba(55, 55, 55,0.05) 20%, rgba(55, 55, 55,0.05) 14%,rgba(209, 209, 209,0.05) 2%, rgba(209, 209, 209,0.05) 60%,rgba(245, 245, 245,0.05) 60%, rgba(245, 245, 245,0.05) 69%,rgba(164, 164, 164,0.05) 69%, rgba(164, 164, 164,0.05) 100%),
+                    linear-gradient(340deg, rgba(255, 0, 0, 0.678) 0%, rgba(248, 248, 248,0.05) 32%,rgba(148, 148, 148,0.05) 32%, rgba(148, 148, 148,0.05) 35%,rgba(202, 202, 202,0.05) 35%, rgba(202, 202, 202,0.05) 51%,rgba(181, 181, 181,0.05) 51%, rgba(181, 181, 181,0.05) 100%),
+                    linear-gradient(183deg, rgb(0, 0, 77),rgb(5, 0, 48));
+  background-attachment: fixed ;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.navbar ul{
+  width: 50vw;
+  list-style-type: none;
+  position: fixed;
+  display: flex;
+  margin: 0;
+  background-color: var(--color_nav);
+  border-radius: 0  0  20px 0 ;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.navbar ul li{
+  text-align: center;
+  width: 150px;
+  margin: auto;
+}
+
+.navbar ul li a:hover{
+  background-color: var(--color_hover);
+}
+
+.navbar ul h1{
+  color: var(--color_accent);
+  font-size: 1vw;
+  width: 6vw;
+  animation: pulse-red 2s infinite;
+  margin: auto;
+}
+
+.navbar ul h1:hover{
+  cursor: context-menu;
+}
+
+.navbar ul li a{
+  color: var(--color_white);
+  text-decoration: none;
+  display: block;
+  padding: 30px 0  30px 0;
+}
+
+.navbar ul li a:active {
+  color: var(--color_accent);
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (orientation: portrait) {
+  .navbar ul{
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .shopping_cart{
+    top: 79px;
+  }
+
+  .shopping_cart_inhoud{
+    margin-top: 80px;
+  }
+}
+
+/* 
+pagina karakters 
+*/
+
+
+
+.item{
+  width: 80%;
+  height: 100%;
+  margin: 0 auto 0 auto;
+  padding-top: 10vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+}
+
+.text{
+  color: var(--color_white);
+  position: relative;
+  margin: 50px 0 0 0;
+}
+
+.text a {
+  color: var(--color_accent);
+}
+
+.text h1{
+  font-size: 7vw;
+  margin: 0;
+  text-align: center;
+}
+
+.text p{
+  font-size: 1.8vw;
+}
+
+.image img{
+  width: 28vw;
+  height: auto;
+  margin: 50px 0 50px 10vw;
+  position:initial;
+}
+
+.js-scroll {
+  opacity: 0;
+}
+
+
+
+.scrolled.slide-right, .first-image {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
+.scrolled.slide-left, .first-p {
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-down, .first-h1 {
+  animation: slide-in-down 1s ease-out both;
+}
+
+.hide{
+  animation: none !important;
+  opacity: 1;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    text-shadow: 0 0 4px var(--color_accent);
+  }
+
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 8px var(--color_accent);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    text-shadow: 0 0 4px var(--color_accent);
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .text {
+    margin: 0;
+  }
+  
+  .text h1{
+    font-size: 14vw;
+    margin: 40px 0 0 0;
+  }
+
+  .text p{
+    font-size: 4vw;
+  }
+  
+  .item{
+    grid-template-columns: auto;
+    height: 150%;
+  }
+
+  .image img{
+    margin: 0 auto 0 auto;
+    width: 60vw;
+  }
+}
+
+/* 
+verhaal pagina 
+*/
+
+.sidenav {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  top: 25%;
+  right: 0;
+  overflow-x: hidden;
+  background-color: var(--color_nav);
+  border-radius: 20px 0  0  20px;
+  height: 50%;
+}
+
+.sidenav a {
+  text-decoration: none;
+  color: var(--color_white);
+  height: 25%;
+  padding: 0  10px 0  10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav a:hover {
+  background-color: var(--color_hover);
+}
+
+.seizoen{
+  height: calc(100vh - 100px);
+  scroll-snap-align: start;
+  padding-top: 100px;
+  margin: auto;
+}
+
+.seizoen_text{
+  width: 60%;
+  margin: auto;
+}
+
+.seizoen h2{
+  color: var(--color_white);
+  text-align: center;
+  font-size: 2vw;
+}
+
+.seizoen p{
+  color: var(--color_white);
+  text-align: center;
+  font-size: 1vw;
+}
+
+.seizoen button{
+  margin: 0 auto;
+  display: block;
+  background-color: var(--color_hover);
+  border: 0;
+  color: var(--color_white);
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.spoiler{
+  filter: blur(5px);
+}
+
+.text_timer p{
+  animation: timer 1s ease-out infinite;
+  color: var(--color_accent);
+  text-align: center;
+  font-size: 4vw;
+  text-shadow: 0 0 20px var(--color_accent);
+  margin: 0;
+}
+
+.videos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.videos iframe{
+  width: 25vw;
+  height: calc(0.70 * 25vw);
+  margin: 10px auto 10px auto;
+}
+
+.video {
+  margin: auto;
+}
+
+@keyframes timer {
+  from {
+    text-shadow: 
+      0  0  100px var(--color_accent),
+      0  0  10px var(--color_accent), 
+      0  0  10px var(--color_accent),
+      0  0  10px var(--color_accent);
+  }
+}
+
+@media only screen and (orientation: portrait){
+  .seizoen_text{
+    width: 50%;
+  }
+  .videos{
+    grid-template-columns: 1fr;
+  }
+  .videos iframe{
+    width: 50vw;
+    height: calc(0.70 * 50vw);
+  }
+  .seizoen h2{
+    font-size: 4vw;
+  }
+  .seizoen p{
+    font-size: 2vw;
+  }
+}
+
+/* 
+shop pagina 
+*/
+
+.flexbox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 200px 0 0 0;
+}
+
+.card {
+  box-shadow: 15px 15px 40px #000000;
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  margin: 20px;
+  background-image: radial-gradient(circle at 97% 32%, rgba(131, 131, 131,0.05) 0%, rgba(131, 131, 131,0.05) 50%,rgba(20, 20, 20,0.05) 50%, rgba(20, 20, 20,0.05) 100%),
+                    radial-gradient(circle at 61% 40%, rgba(35, 35, 35,0.05) 0%, rgba(35, 35, 35,0.05) 50%,rgba(239, 239, 239,0.05) 50%, rgba(239, 239, 239,0.05) 100%),
+                    radial-gradient(circle at 47% 73%, rgba(122, 122, 122,0.05) 0%, rgba(122, 122, 122,0.05) 50%,rgba(5, 5, 5,0.05) 50%, rgba(5, 5, 5,0.05) 100%),
+                    linear-gradient(90deg, rgb(7, 0, 75),rgb(2,0,92));
+  overflow: hidden;
+}
+
+.card:hover > .card_text{
+  margin-top: 40px;
+}
+
+.card_image{
+  display: flex;
+  justify-content: center;
+}
+
+.card_image img {
+  height: 250px;
+  width: auto;
+  margin-top: 50px;
+}
+
+.card_text{
+  height: 250px;
+  margin: 100px 0  0  0;
+  padding: 10px 0  0  20px;
+  color: var(--color_white);
+  background-color: rgb(255, 0, 0, 0.4);
+  transition: margin-top .3s ease-in-out;
+}
+
+.card h1{
+  font-size: 30px;
+  margin: 20px 0  0  0;
+}
+
+.card p{
+  font-size: 20px;
+}
+
+.totaalprijs_text{
+  display: flex;
+  justify-content: right;
+}
+
+.totaalprijs{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 60px 10px 10px;
+  width: 45%;
+}
+
+.afreken_text{
+  display: flex;
+  justify-content: right;
+  margin: 0 40px 10px 0;
+}
+
+.afreken_text button{
+  border: none;
+  background-color: rgb(255, 0, 0, 0.4);
+  color: var(--color_white);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--color_white);
+}
+
+.afreken_text button:hover{
+  background-color: rgb(255, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.cart_text button:active {
+  color: var(--color_accent);
+}
+
+.cart_button{
+  background-color: var(--color_blue);
+  color: var(--color_white);
+  margin: 30px 0 0 0;
+  transform: translateX(50%);
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card_text button:hover{
+  color:var(--color_blue);
+  background-color: var(--color_white);  
+}
+
+.card_text button:active{
+  background-color: var(--color_blue);
+  color: var(--color_white);
+}
+
+.shopping_cart{
+  background-color: var(--color_nav);
+  position: fixed;
+  right: 5%;
+  height: 80px;
+  width: 80px;
+  border-radius: 0 0 20px 20px;
+  cursor: pointer;
+}
+
+.shopping_cart img{
+  transform: translate(25%, 25%);
+  position: relative;
+}
+
+#shopping_cart_inhoud{
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 60, 0.8);
+  right: 5%;
+  top: 85px;
+  z-index: 1;
+  width: 800px;
+  color: var(--color_white);
+  border-radius: 10px;
+}
+
+#shopping_cart_inhoud h1{
+  text-align: center;
+}
+
+.shopping_cart_item{
+  margin: 10px;
+  display: none;
+  border: 1px solid var(--color_white); 
+  margin: 0 80px 0 80px;
+}
+
+.shopping_cart_text{
+  color: var(--color_white);
+  display: grid;
+  grid-template-columns: 100px 175px 125px 150px 150px;
+  padding: 0 30px 0 30px;
+}
+
+.shopping_cart_text p{
+  width: 100px;
+}
+
+.shopping_cart_text a{
+  cursor: pointer;
+}
+
+.shopping_cart_identifier{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 80px 0 80px;
+}
+
+@media screen and (max-width: 1000px) {
+  #shopping_cart_inhoud{
+    width: 80%;
+  }
+  .shopping_cart_text{
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+  }
+  .small {
+    display: none;
+  }
+  .shopping_cart_identifier{
+    justify-content: space-evenly;
+  }
+
+
+}
+
+@media screen and (max-width: 1200px) {
+  .flexbox{
+    width: 90%;
+  }
+}
+
+/* 
+pagina bronnen 
+*/
+
+.bronnenlijst{
+  padding-top: 125px;
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
+.bronnenlijst a{
+  color: var(--color_white);
+  text-decoration: none;
+  margin: 35px 0 0 0;
+  width: 50vw;
+}
+
+.bronnenlijst a:hover{
+  text-decoration: underline;
+  color: var(--color_accent)
+}
+
+
+.unloadedItem{
+  position: absolute;
+  opacity: 0;
+}
